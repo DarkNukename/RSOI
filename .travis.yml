@@ -1,0 +1,25 @@
+language: python
+
+python:
+  - '3.7.3'
+
+deploy:
+  provider: heroku
+
+  buildpack: python
+
+  api_key:
+    secure: 8e0f4d72-3b54-4ce5-b239-e033f2acbef4
+
+  startegy: git
+
+  app: secret-plains-38596
+
+  on:
+    repo: DarkNukename/RSOI
+
+  run:
+    - "python manage.py migrate"
+    - restart
+
+script: "python manage.py test"
