@@ -34,9 +34,9 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'cg#p$g+j9tax!#a3cup@1$8obt2_+&
 #DEBUG = True
 DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
 
-ALLOWED_HOSTS = ['127.0.0.1', 'pure-gorge-74714.herokuapp.com']
+ALLOWED_HOSTS = []
 
-
+#'pure-gorge-74714.herokuapp.com'
 # Application definition
 
 INSTALLED_APPS = [
@@ -45,8 +45,8 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    #'django.contrib.staticfiles',
-	'M   ySite',
+    'django.contrib.staticfiles',
+	'MySite',
 ]
 
 MIDDLEWARE = [
@@ -137,9 +137,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
 # Extra places for collectstatic to find static files.
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+
 
 
 #BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
