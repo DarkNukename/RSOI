@@ -10,7 +10,7 @@ class ProductTest(TeatCase)
 		__product = Product.objects.get(id = 1)
 		colum_name0 = product0._meta.get_field('position').verbose_name
 		colum_name1 = product0._meta.get_field('price').verbose_name
-		self.assertEqual(colum_name0, "product")
+		self.assertEqual(colum_name0, "position")
 		self.assertEqual(colum_name1, "price")
 
 
@@ -18,5 +18,5 @@ class ProductTest(TeatCase)
 		__product = Product.objects.get(id = 1)
 		lenght0 = __product._meta.get_field("position").max_length
 		lenght1 = float(__product._meta.get_field("price").max_length)
-		self.assertEqual(lenght0, "product")
+		self.assertEqual(lenght0, "position")
 		self.assertEqual(lenght1, "price")
